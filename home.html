@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Challenge 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet"
+                    href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"    />
+                
+</head>
+<body>
+     <!--Main container-->   
+    <div class="container">
+
+     <header>
+        <!-- Creating nav for navigation & logo-->
+         <nav>
+        <div class ="logo"> LOGO</div>
+     
+        <ul class="nav-links">
+        <li><a class ="active" href="#">HOME</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">PURCHASE</a></li>
+        <li><a href="#">FEATURE</a></li>
+        <li><a href="#">CONTACT US</a></li>
+    </ul>
+        </nav>
+
+    <!--Referencing w3schools for the texy slideshow-->
+
+    <!--Main text slidshow-->
+    <div class="slideshow-container">
+<!--Each of the divs below represent a slide. The first one is the first slide, the second one is the second slide and so on.-->
+    <div class="mySlides">
+    <p class="author">1 HERO TITLE EXAMPLE </p>
+    <p>HERO SUB-TITLE DESCRIPTION</p>
+     </div>
+    <div class="mySlides">
+    <p class="author">2 HERO TITLE EXAMPLE </p>
+    <p>HERO SUB-TITLE DESCRIPTION</p>
+     </div>
+    <div class="mySlides">
+    <p class="author">3 HERO TITLE EXAMPLE </p>
+    <p>HERO SUB-TITLE DESCRIPTION</p>
+      </div>
+<!--left and right navigation arrows-->
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<!--The dots/circles which indicates the current slide and allows you to click on them to move to that slide-->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<!--Java script to move the slides as you click them left or right-->
+<script>
+var slideIndex = 1; /*Initialise the variable slideIndex to 1 */
+
+showSlides(slideIndex); /*shows slides with current slideindex set to 1(as seen above)*/
+
+function plusSlides(n) { /*This function will skip ahead n slides and show that slide. */
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) { /*This sets slideIndex to n and then shows the nth slide.*/
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) { /*Inside the showSlides function, we declare an empty variable i below*/
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";/*making it visible (it was previously set to 'none' which hides it)*/
+  dots[slideIndex-1].className += " active"; /*Sets the dots to active*/
+}
+</script>
+        </header>
+   <!--First section flex style layout-->
+    <section>
+    <!--Second section flex style layout-->
+            <div class="col-left">
+                <!--Image & button of the page-->
+                <img src="my-image.jpg" alt="flowers">
+                <div class="text">
+                  <!--Hero Title -->                   
+                 <h1 style="text-align: left;">HERO TITLE EXAMPLE</h1>
+                 <!--Hero Sub-Title -->
+                 <h3 style="text-align: left;">HERO SUB-TITLE DESCRIPTION</h3>
+                 <!--Some text-->
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's <br/> standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p><br/>                        
+                        <p>It has survived not only five centuries, but also the leap into
+                         electronic typesetting, remaining essentially unchanged.<br/> It was popularised in the
+                          1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                          and more recently with desktop publishing software like Aldus PageMaker 
+                          including versions of Lorem Ipsum.
+                          It was popularised in the
+                          1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                          and more recently with desktop publishing software like Aldus PageMaker 
+                          including versions of Lorem Ipsum.
+                    </p>
+                    <!--Animation button-->
+                    <div class="button">
+                        <button class="button" style="vertical-align:middle"><span>READ MORE </span></button>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </section>
+    
+        <!--Second section flex style layout-->
+        <div class="second-container">
+    <!--Second section of flex layout-->
+        <section>
+            <!--Second section flex style layout-->
+               <div class="col-left-2"> 
+                 <!--Sponser section example-->
+                <div><h1><p class="title-sponser">SPONSER EXAMPLE</p></h1></div>
+                <!--Sponser description-->
+                    <div><h3><p>SPONSER DESCRIPTION<br/></p></h3></div>
+                <!--Five boxes container-->
+                <div class="container-boxes">
+                <div class = "box" id="box1">1</div>
+                <div class = "box" id="box2">2</div>
+                <div class = "box" id="box3">3</div>
+                <div class = "box" id="box4">4</div>
+                <div class = "box" id="box5">5</div>
+            </div>
+            </div>
+         
+        </section>
+       </div>
+        <!--First Footer section containing Contact Us form, Menu links , icons & Logo-->
+        <footer class="footer">
+
+
+<div class="form">  
+<h1>COTACT US</h1>
+<h3>Send us a message</h3>
+    
+    <input type="text" id="fname" name="firstname" placeholder="Full Name"><br/>
+    <input type="text" id="lname" name="lastname" placeholder="Your Email"><br/>
+    <textarea id="subject" name="subject" placeholder="Your Message" style="height:80px"></textarea><br/>
+    <input type="button" value="Submit">
+    
+</div>
+
+         
+<div class="footer-menu">
+ <h1>SITEMAP</h1>
+ <h3>All of our pages</h3>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#">PURCHASE</a></li>
+        <li><a href="#">FEATURE</a></li>
+        <li><a href="#">CONTACT US</a></li>
+</div>
+
+<div class="icons">
+<div class ="logo2">LOGO</div>    
+
+<div class ="call"><i class="fa-solid fa-phone"></i></div>
+<p>0208 80 088 80</p>
+
+<div calss ="mail"><i class="fa-regular fa-envelope"></i></div>
+<div><p>CUSTOMERSERVICE@COMPANY.COM</p></div>
+
+</div>
+        </footer>
+
+        <!--Second Footer section containing copyright information-->
+        <footer-2 class="footer-2">
+            <p>COPYRIGHT © 2001 All RIGHTS RESERVED.</p>
+         </footer-2>
+     
+    </div>
+   
+</div>
+
+ </body>
+</html>
