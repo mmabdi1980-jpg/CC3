@@ -1,0 +1,292 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{ background-color: #424242;}
+
+/*Container*/
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+ /*Main Header section*/ 
+header{
+        flex: 1;
+        background-color:rgb(119, 119, 119);/*removed border: 2px solid blueviolet; */
+        border-radius: 1em;
+                
+     }
+/*The picture and button section*/
+section {
+        flex: 2;
+        border-radius: 1em;
+        display: flex;
+       }
+/*The five boxes section*/
+.col-left{
+        flex: 2;
+        background-color:rgb(199, 198, 201); /*removed border: 2px solid red; */
+        border-radius: 1em;              
+    }
+/*The five boxes section*/
+.second-container{ display: flex; flex-direction: column;}
+/*The five boxes section*/
+.col-left-2{ 
+        flex: 2;
+        background-color:rgb(199, 198, 201); /*removed border: 2px solid red; */
+        border-radius: 1em;
+      }
+/*First footer*/
+footer{
+        flex: 1;
+        border-radius: 1em;
+        background-color:rgb(53, 53, 53);
+        
+
+        }
+/*Second footer*/        
+footer-2 {
+        flex: 1;
+        border-radius: 2em;
+        background-color:rgb(41, 41, 41);
+        
+        }
+ 
+@media(max-width:968px){
+            section,
+            .second-container{flex-direction: column;}
+        .container{margin: 1em 2em;}
+            
+        }
+
+/*-------------CC3 start---------------*/
+
+/*Navigation Bar */
+nav {
+padding :1rem 5%;
+background:rgba(190, 186, 186, 0.5);
+border-bottom: 1px solid rgba(255,255,255, 0.1);
+backdrop-filter: blur(15px);
+margin-bottom: 2rem;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+/*Logo section*/
+.logo{
+position :relative;
+font-size: 50px;
+font-weight: 700;
+color:#2f2f30;
+letter-spacing: 1px;
+margin-right: auto;
+}
+/*Navigation Links*/
+.nav-links{
+list-style: none;
+display: flex;
+gap: 2rem;
+margin-right: auto;
+border: 3px solid #0e0d0d;
+border-radius: 0.5px;
+}
+/*Navigation Links List ancher*/
+.nav-links li a{
+    position:relative;
+    font-size: 19px;
+    font-weight: 200;
+    text-decoration: none;
+    color:#121213;
+    transition : 0.3s;
+   }
+/*Navigation Links ancher hover effect*/
+ .nav-links li a:hover{
+    color: #474747;
+    text-shadow:0 0 10px #474747;
+ }
+ /*Nav list anchor active state*/
+ ul li a.active {
+  background-color: grey;
+ 
+}
+
+/********Slide text show********/
+
+
+/**** Slideshow container ***/
+.slideshow-container {
+  position: relative;
+    background-color:rgb(199, 198, 201);
+}
+
+/** Slides Styling **/
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/** Next & previous buttons of the slides*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/** Position the "next button" to the right styling **/
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/** The dot/bullet/indicator container **/
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 100%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: bold;}
+
+/* Add a blue color to the author */
+.author {color: rgb(7, 7, 7);
+font-size: 20px;
+}
+  
+/*Picture, text and button*/
+/*Flowers Image*/
+img {
+    margin: 10px;
+    max-width: 525px;
+    float: left;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-right: 40px;
+ }
+ /*Text h1*/
+.text h1{ font-size: 35px;padding: 5px;}
+/*Text h3*/
+.text h3{ font-size:18px; padding: 5px;}
+/*Text paragraph*/
+.text p{ text-align: left;font-size: 14px; text-align:justify;}
+/*Button display*/
+.button {
+  display: inline-block;
+  border-radius: 1px;
+  background-color: #646464;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+}
+/*Button span in the html */
+.button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+/*Button span after effect*/
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+/*Button hover effect*/
+.button:hover span {padding-right: 25px;}
+/*Button span after hover effect*/
+.button:hover span:after {opacity: 1; right: 0;}
+
+/******Boxes section******/
+
+/*Aligning text to center*/
+.col-left-2 h1, .col-left-2 h3 {text-align: center;}
+/*Container for five boxes in html*/
+.container-boxes { display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+/*Box styling*/
+.box{
+width: 100px;
+height: 100px;
+font-size: 40px;
+border-radius: 15px;
+}
+/*Five boxes styling*/
+#box1{background-color: rgb(248, 247, 247);border:3px solid rgb(8, 8, 8);}
+#box2{background-color: rgb(248, 247, 247);border: 2px solid rgb(8, 8, 8);}
+#box3{background-color: rgb(248, 247, 247);border: 2px solid rgb(8, 8, 8);}
+#box4{background-color: rgb(248, 247, 247);border: 2px solid rgb(8, 8, 8);}
+#box5{background-color: rgb(248, 247, 247);border: 2px solid rgb(8, 8, 8);}
+
+/*-------------First Footer----------*/
+/*First Footer sections 1:contact us form, 2:sitemap menu links 3:logo telephone & email*/
+.footer{
+ padding :1rem;
+ display: flex;
+ justify-content: space-evenly;
+ gap: 15%;
+ }
+ /*Contact us form styling*/
+.form{ padding: 0;color: white;}
+/*Sitemap menu links styling*/
+.footer-menu{color: white;}
+/*Sitemap menu links ancher styling*/
+.footer-menu a {color: white;}
+/*Sitemap menu links list styling*/
+.footer-menu li{margin: 10px;}
+/*Logo, telephone and email section styling*/
+.icons{color:white;display:flex; flex-direction: column; gap: 10px;}
+/*2nd logo section styling*/
+.logo2{
+font-size: 50px;
+font-weight: 700;
+color:white;
+margin-right: 50px;}
+/**/
+.footer-2 p{color: white; text-align: center;}
+
+
+
+
